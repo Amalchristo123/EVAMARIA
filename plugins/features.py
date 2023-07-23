@@ -5,6 +5,7 @@ import random
 from pyrogram import Client, filters, enums
 from pyrogram.types import *
 from info import ADMINS
+from time import time, sleep
 from plugins.helper_functions.admin_check import admin_check
 from Script import script
 from plugins.helper_functions.extract import extract_time, extract_user

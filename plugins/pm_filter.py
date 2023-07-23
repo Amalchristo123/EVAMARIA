@@ -64,7 +64,7 @@ async def next_page(bot, query):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] {file.file_name}", callback_data=f'files#{file.file_id}'
+                    text=f"|{get_size(file.file_size)}|› {file.file_name}", callback_data=f'files#{file.file_id}'
                 ),
             ]
             for file in files
@@ -215,7 +215,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
         keyboard = InlineKeyboardMarkup([
             [InlineKeyboardButton(f"{stat}", callback_data=f"{cb}:{group_id}"),
-             InlineKeyboardButton("DELETE", callback_data=f"deletecb:{group_id}")],
+             InlineKeyboardButton("🚮DELETE🚮", callback_data=f"deletecb:{group_id}")],
             [InlineKeyboardButton("BACK", callback_data="backcb")]
         ])
 
@@ -404,13 +404,15 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer()
     elif query.data == "start":
         buttons = [[
-            InlineKeyboardButton('➕ Add Me To Your Groups ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('⚡️ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs⚡️', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
-            InlineKeyboardButton('🔍 Search', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('🤖 Updates', url='https://t.me/TeamEvamaria')
+            InlineKeyboardButton('🪄sᴇᴀʀᴄʜ🪄', switch_inline_query_current_chat=''),
+            InlineKeyboardButton('📣ᴜᴩᴅᴀᴛᴇꜱ📣', url='https://t.me/KOMBOTZZ')
         ], [
-            InlineKeyboardButton('ℹ️ Help', callback_data='help'),
-            InlineKeyboardButton('😊 About', callback_data='about')
+            InlineKeyboardButton('⚙️ʜᴇʟᴩ⚙️', callback_data='help'),
+            InlineKeyboardButton('🖤ᴀʙᴏᴜᴛ🖤', callback_data='about')
+        ], [
+            InlineKeyboardButton('🌝ᴏᴡɴᴇʀ ɪɴғᴏ🌝', url='https://t.me/luttappimovie')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -421,14 +423,14 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer('Piracy Is Crime')
     elif query.data == "help":
         buttons = [[
-            InlineKeyboardButton('Manual Filter', callback_data='manuelfilter'),
-            InlineKeyboardButton('Auto Filter', callback_data='autofilter')
+            InlineKeyboardButton('💫ᴍᴀɴᴜᴀʟ ꜰɪʟᴛᴇʀ💫', callback_data='manuelfilter'),
+            InlineKeyboardButton('⚙️ᴀᴜᴛᴏ ꜰɪʟᴛᴇʀ⚙️', callback_data='autofilter')
         ], [
-            InlineKeyboardButton('Connection', callback_data='coct'),
-            InlineKeyboardButton('Extra Mods', callback_data='extra')
+            InlineKeyboardButton('⚡️ᴄᴏɴɴᴇᴄᴛɪᴏɴ⚡️', callback_data='coct'),
+            InlineKeyboardButton('📍ᴇxᴛʀᴀ ᴍᴏᴅꜱ📍', callback_data='extra')
         ], [
-            InlineKeyboardButton('🏠 Home', callback_data='start'),
-            InlineKeyboardButton('🔮 Status', callback_data='stats')
+            InlineKeyboardButton('🏡ʜᴏᴍᴇ🏡', callback_data='start'),
+            InlineKeyboardButton('🤍ꜱᴛᴀᴛᴜꜱ🤍', callback_data='stats')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -438,11 +440,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('🤖 Updates', url='https://t.me/TeamEvamaria'),
-            InlineKeyboardButton('♥️ Source', callback_data='source')
+            InlineKeyboardButton('📣ᴜᴩᴅᴀᴛᴇꜱ📣', url='https://t.me/KOMBOTZZ'),
+            InlineKeyboardButton('👨‍💻ꜱᴏᴜʀᴄᴇ👨‍💻', callback_data='source')
         ], [
-            InlineKeyboardButton('🏠 Home', callback_data='start'),
-            InlineKeyboardButton('🔐 Close', callback_data='close_data')
+            InlineKeyboardButton('🏡ʜᴏᴍᴇ🏡', callback_data='start'),
+            InlineKeyboardButton('❌️ᴄʟᴏꜱᴇ❌️', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(

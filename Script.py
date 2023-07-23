@@ -12,7 +12,7 @@ class script(object):
 🎛️ʙᴜɪʟᴅ sᴛᴀᴛᴜs🎛️ : ᴠ2.7.1 [sᴛᴀʙʟᴇ]
 ___________👨‍💻ᴄʀᴇᴅɪᴛꜱ👨‍💻___________
 <a href='https://t.me/LUTTAPPIxTG'>『🍁』༺⋆ͥ⋆ͣ⋆᭄ͫ⁣𓆩𝙻𝚄𝚃𝚃𝙰𝙿𝙿𝙸𓆪➳࿐𝆺𝅥⃝🇧🇷</a></b>
-<a href='https://t.me/KOMBOTZZ'>ᴋᴏᴍ ʙᴏᴛꜱ</a></b>"""
+<a href='https://t.me/KOMBOTZZ'>ᴋᴏᴍ ʙᴏᴛꜱ</a></b>
 
 <b>DEVS:</b>
 - <a href=https://t.me/TeamEvamaria>Team Eva Maria</a>"""

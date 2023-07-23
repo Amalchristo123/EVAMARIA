@@ -21,3 +21,4 @@ dnspython
 python-math
 psutil==5.9.4
 Pillow
+python-telegram-bot

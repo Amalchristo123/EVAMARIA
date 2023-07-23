@@ -1,5 +1,4 @@
 import re, asyncio, os, sys
-import time
 import random
 from pyrogram import Client, filters, enums
 from pyrogram.types import *

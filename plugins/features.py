@@ -168,10 +168,10 @@ async def check_alive(_, message):
 
 @Client.on_message(filters.command("ping", prefixes='/') & filters.private)
 async def ping_command(_, message):
-    start_t = time.time()
+    start_t = time()
     rm = await message.reply_text("Pinging...")
     ping = get_ping()
-    end_t = time.time()
+    end_t = time()
     time_taken_s = (end_t - start_t) * 1000
     await rm.edit(f"📶Ping📶: {ping} ms\n🚩Response time🚩: {time_taken_s:.3f} ms")
 

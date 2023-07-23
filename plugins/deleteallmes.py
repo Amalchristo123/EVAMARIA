@@ -40,5 +40,5 @@ def main() -> None:
     # Run the bot until the user presses Ctrl-C or the process is interrupted
     updater.idle()
 
-if name == 'main':
+if __name__ == '__main__':
     main()

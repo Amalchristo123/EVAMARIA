@@ -16,7 +16,7 @@ def all_delete(update: Update, _: CallbackContext) -> None:
     user = update.effective_user
     if user is not None:
         # Check if the user is the bot's owner or authorized to use the command (optional)
-        if user.username == @LUTTAPPIXTG or user.id in ADMINS:
+        if user.id in ADMINS:
             for message in update.effective_message.bot.get_updates():
                 try:
                     message.effective_message.delete()

@@ -3,6 +3,13 @@ class script(object):
 𝙼𝚈 𝙽𝙰𝙼𝙴 𝙸𝚂 <a href=https://t.me/{}>{}</a>, ɪ ᴄᴀɴ ᴩʀᴏᴠɪᴅᴇ ᴍᴏᴠɪᴇꜱ, ᴊᴜꜱᴛ ᴀᴅᴅ ᴍᴇ ᴛᴏ ᴛᴏᴜʀ ɢʀᴏᴜᴩ ᴀɴᴅ ᴇɴᴊᴏy😍"""
     HELP_TXT = """𝙷𝙴𝚈 {}
 𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙷𝙴𝙻𝙿 𝙵𝙾𝚁 𝙼𝚈 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂."""
+    SOURCE_TXT = """<b>ɴᴏᴛᴇ:
+- ⚠️ᴛʜɪꜱ ʙᴏᴛ ɪꜱ ɴᴏᴛ ᴀɴ  ᴏᴘᴇɴ ꜱᴏᴜʀᴄᴇ ᴘʀᴏᴊᴇᴄᴛ ⚠️.
+- ꜱᴏᴜʀᴄᴇ - <a href="https://t.me/KINGOFMOVIES003">ʜᴇʀᴇ</a>
+- ᴄʜᴇᴄᴋ ᴏᴜᴛ ᴏᴜʀ ᴀʟʟ ᴄʜᴀɴɴᴇʟꜱ - @KOM_LINKS
+Dᴇᴠᴇʟᴏᴘᴇʀ:
+- <a href="https://t.me/LUTTAPPIxTG">『🍁』༺⋆ͥ⋆ͣ⋆᭄ͫ⁣𓆩𝙻𝚄𝚃𝚃𝙰𝙿𝙿𝙸𓆪➳࿐𝆺𝅥⃝🇧🇷</a></b>"""
+    
     ABOUT_TXT = """<b>🌝Mʏ Nᴀᴍᴇ🌝: {}
 👨‍💻ᴅᴇᴠᴇʟᴏᴘᴇʀ👨‍💻: <a href='https://t.me/KOMBOTZZ'>『🍁』༺⋆ͥ⋆ͣ⋆᭄ͫ⁣𓆩𝙻𝚄𝚃𝚃𝙰𝙿𝙿𝙸𓆪➳࿐𝆺𝅥⃝🇧🇷</a>
 📚Lɪʙʀᴀʀʏ📚: <a href='https://docs.pyrogram.org/'>Pʏʀᴏɢʀᴀᴍ</a>
@@ -12,10 +19,8 @@ class script(object):
 🎛️ʙᴜɪʟᴅ sᴛᴀᴛᴜs🎛️ : ᴠ2.7.1 [sᴛᴀʙʟᴇ]
 ___________👨‍💻ᴄʀᴇᴅɪᴛꜱ👨‍💻___________
 <a href='https://t.me/LUTTAPPIxTG'>『🍁』༺⋆ͥ⋆ͣ⋆᭄ͫ⁣𓆩𝙻𝚄𝚃𝚃𝙰𝙿𝙿𝙸𓆪➳࿐𝆺𝅥⃝🇧🇷</a></b>
-<a href='https://t.me/KOMBOTZZ'>ᴋᴏᴍ ʙᴏᴛꜱ</a></b>
-
-<b>DEVS:</b>
-- <a href=https://t.me/LUTTAPPIxTG>『🍁』༺⋆ͥ⋆ͣ⋆᭄ͫ⁣𓆩𝙻𝚄𝚃𝚃𝙰𝙿𝙿𝙸𓆪➳࿐𝆺𝅥⃝🇧🇷</a>"""
+<a href='https://t.me/KOMBOTZZ'>ᴋᴏᴍ ʙᴏᴛꜱ</a></b>"""
+    
     MANUELFILTER_TXT = """Help: <b>Filters</b>
 
 - Filter is the feature were users can set automated replies for a particular keyword and EvaMaria will respond whenever a keyword is found the message

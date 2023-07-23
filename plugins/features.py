@@ -52,7 +52,7 @@ async def purge(client, message):
     await asyncio.sleep(5)
     await status_message.delete()
   #ban
- @Client.on_message(filters.command("ban"))
+@Client.on_message(filters.command("ban"))
 async def ban_user(_, message):
     is_admin = await admin_check(message)
     if not is_admin:

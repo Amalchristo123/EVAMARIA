@@ -12,9 +12,9 @@ from plugins.helper_functions.cust_p_filters import f_onw_fliter
 from pyrogram.errors import FloodWait
 from pyrogram.errors.exceptions.forbidden_403 import ChatWriteForbidden
 from pyrogram.errors.exceptions.bad_request_400 import ChatAdminRequired, UserAdminInvalid
-from speedtest import Speedtest
+import Speedtest
 
-speedtester = Speedtest()
+speedtester = Speedtest.Speedtest()
 def get_ping():
     speedtester.get_best_server()
     ping = speedtester.results.ping

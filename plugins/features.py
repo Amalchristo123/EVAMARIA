@@ -24,8 +24,7 @@ ALIVE = "<b>ʜɪ ɪ ᴀᴍ ᴀʟɪɴᴇ ʙʀᴜʜ🥵</b>"
 async def stop_button(bot, message):
     msg = await bot.send_message(text="**🔄 𝙿𝚁𝙾𝙲𝙴𝚂𝚂𝙴𝚂 𝚂𝚃𝙾𝙿𝙴𝙳. 𝙱𝙾𝚃 𝙸𝚂 𝚁𝙴𝚂𝚃𝙰𝚁𝚃𝙸𝙽𝙶...**", chat_id=message.chat.id)       
     await asyncio.sleep(3)
-    await msg.edit(command
-                   𝙾𝚃 𝙸𝚂 𝚁𝙴𝚂𝚃𝙰𝚁𝚃𝙴𝙳. 𝙽𝙾𝚆 𝚈𝙾𝚄 𝙲𝙰𝙽 𝚄𝚂𝙴 𝙼𝙴**")
+    await msg.edit("**✅️ 𝙱𝙾𝚃 𝙸𝚂 𝚁𝙴𝚂𝚃𝙰𝚁𝚃𝙴𝙳. 𝙽𝙾𝚆 𝚈𝙾𝚄 𝙲𝙰𝙽 𝚄𝚂𝙴 𝙼𝙴**")
     os.execl(sys.executable, sys.executable, *sys.argv)
 
 #________PURGE______
@@ -64,7 +63,8 @@ async def purge(client, message):
     await status_message.edit_text(f"deleted {count_del_etion_s} messages")
     await asyncio.sleep(5)
     await status_message.delete()
-  #ban
+    
+#ban
 @Client.on_message(filters.command("ban"))
 async def ban_user(_, message):
     is_admin = await admin_check(message)
@@ -80,8 +80,33 @@ async def ban_user(_, message):
             await message.reply_text(f"Someone else is dusting off..! \n{user_first_name} \nIs forbidden.")                              
         else:
             await message.reply_text(f"Someone else is dusting off..! \n<a href='tg://user?id={user_id}'>{user_first_name}</a> Is forbidden")                      
-            
 
+@Client.on_message(filters.command(["unban", "unmute"]))
+async def un_ban_user(_, message):
+    is_admin = await admin_check(message)
+    if not is_admin:
+        return
+    user_id, user_first_name = extract_user(message)
+    try:
+        await message.chat.unban_member(user_id=user_id)
+    except Exception as error:
+        await message.reply_text(str(error))
+    else:
+        if str(user_id).lower().startswith("@"):
+            await message.reply_text(
+                "Okay, changed ... now "
+                f"{user_first_name} To "
+                " You can join the group!"
+            )
+        else:
+            await message.reply_text(
+                "Okay, changed ... now "
+                f"<a href='tg://user?id={user_id}'>"
+                f"{user_first_name}"
+                "</a> To "
+                " You can join the group!"
+            )
+            
 @Client.on_message(filters.command("tban"))
 async def temp_ban_user(_, message):
     is_admin = await admin_check(message)

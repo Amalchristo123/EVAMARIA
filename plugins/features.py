@@ -1,10 +1,22 @@
 import re, asyncio, os, sys
+import speedtest
+import time
+import random
 from pyrogram import Client, filters, enums
 from pyrogram.types import *
 from info import ADMINS
 from plugins.helper_functions.admin_check import admin_check
 from Script import script
 from plugins.helper_functions.extract import extract_time, extract_user
+from plugins.helper_functions.cust_p_filters import f_onw_fliter
+
+
+speedtester = speedtest.Speedtest()
+def get_ping():
+    speedtester.get_best_server()
+    ping = speedtester.results.ping
+    return ping
+ALIVE = "<b>ʜɪ ɪ ᴀᴍ ᴀʟɪɴᴇ ʙʀᴜʜ🥵</b>"
 
 
 #_______RESTART______   
@@ -12,7 +24,8 @@ from plugins.helper_functions.extract import extract_time, extract_user
 async def stop_button(bot, message):
     msg = await bot.send_message(text="**🔄 𝙿𝚁𝙾𝙲𝙴𝚂𝚂𝙴𝚂 𝚂𝚃𝙾𝙿𝙴𝙳. 𝙱𝙾𝚃 𝙸𝚂 𝚁𝙴𝚂𝚃𝙰𝚁𝚃𝙸𝙽𝙶...**", chat_id=message.chat.id)       
     await asyncio.sleep(3)
-    await msg.edit("**✅️ 𝙱𝙾𝚃 𝙸𝚂 𝚁𝙴𝚂𝚃𝙰𝚁𝚃𝙴𝙳. 𝙽𝙾𝚆 𝚈𝙾𝚄 𝙲𝙰𝙽 𝚄𝚂𝙴 𝙼𝙴**")
+    await msg.edit(command
+                   𝙾𝚃 𝙸𝚂 𝚁𝙴𝚂𝚃𝙰𝚁𝚃𝙴𝙳. 𝙽𝙾𝚆 𝚈𝙾𝚄 𝙲𝙰𝙽 𝚄𝚂𝙴 𝙼𝙴**")
     os.execl(sys.executable, sys.executable, *sys.argv)
 
 #________PURGE______
@@ -120,3 +133,17 @@ async def report_user(bot, message):
         if success:
             await message.reply_text(script.REPRT_MSG)
           
+#ping and alive command
+@Client.on_message(filters.command("alive", "/") & f_onw_fliter)
+async def check_alive(_, message):
+    await message.reply_text(ALIVE)
+
+
+@Client.on_message(filters.command("ping", prefixes='/') & filters.private)
+async def ping_command(_, message):
+    start_t = time.time()
+    rm = await message.reply_text("Pinging...")
+    ping = get_ping()
+    end_t = time.time()
+    time_taken_s = (end_t - start_t) * 1000
+    await rm.edit(f"📶Ping📶: {ping} ms\n🚩Response time🚩: {time_taken_s:.3f} ms")

@@ -9,7 +9,7 @@ bot_token = BOT_TOKEN
 # Enable logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 
-logger = logging.getLogger(name)
+logger = logging.getLogger(__name__)
 
 # Command handler to handle the /alldelete command
 def all_delete(update: Update, _: CallbackContext) -> None:

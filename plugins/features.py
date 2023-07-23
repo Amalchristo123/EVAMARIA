@@ -14,7 +14,7 @@ from pyrogram.errors.exceptions.forbidden_403 import ChatWriteForbidden
 from pyrogram.errors.exceptions.bad_request_400 import ChatAdminRequired, UserAdminInvalid
 from speedtest import Speedtest
 
-speedtester = speedtest.Speedtest()
+speedtester = Speedtest()
 def get_ping():
     speedtester.get_best_server()
     ping = speedtester.results.ping

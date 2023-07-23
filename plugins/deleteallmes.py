@@ -1,44 +1,19 @@
-import logging
-from telegram import Update
-from info import BOT_TOKEN ,ADMINS
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
 
-# Replace 'YOUR_BOT_TOKEN' with the actual API token of your bot.
+from info import BOT_TOKEN
+import requests
+
 bot_token = BOT_TOKEN
 
-# Enable logging
-logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
+def delete_bot_messages():
+    get_updates_url = f'https://api.telegram.org/bot{bot_token}/getUpdates'
+    response = requests.get(get_updates_url)
+    data = response.json()
 
-logger = logging.getLogger(__name__)
+    for result in data['result']:
+        chat_id = result['message']['chat']['id']
+        message_id = result['message']['message_id']
+        delete_message_url = f'https://api.telegram.org/bot{bot_token}/deleteMessage?chat_id={chat_id}&message_id={message_id}'
+        requests.get(delete_message_url)
 
-# Command handler to handle the /alldelete command
-def all_delete(update: Update, _: CallbackContext) -> None:
-    user = update.effective_user
-    if user is not None:
-        # Check if the user is the bot's owner or authorized to use the command (optional)
-        if user.id in ADMINS:
-            for message in update.effective_message.bot.get_updates():
-                try:
-                    message.effective_message.delete()
-                except Exception as e:
-                    logger.error(f"Error deleting message: {e}")
-        else:
-            update.message.reply_text("You are not authorized to use this command.")
-    else:
-        update.message.reply_text("You need to send this command in a group.")
+delete_bot_messages()
 
-def main() -> None:
-    updater = Updater(bot_token)
-    dispatcher = updater.dispatcher
-
-    # Handler to handle the /alldelete command
-    dispatcher.add_handler(CommandHandler("alldelete", all_delete))
-
-    # Start the Bot
-    updater.start_polling()
-
-    # Run the bot until the user presses Ctrl-C or the process is interrupted
-    updater.idle()
-
-if __name__ == 'main':
-    main()

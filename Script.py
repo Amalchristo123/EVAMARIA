@@ -9,7 +9,7 @@ class script(object):
 - ᴄʜᴇᴄᴋ ᴏᴜᴛ ᴏᴜʀ ᴀʟʟ ᴄʜᴀɴɴᴇʟꜱ - @KOM_LINKS
 Dᴇᴠᴇʟᴏᴘᴇʀ:
 - <a href="https://t.me/LUTTAPPIxTG">『🍁』༺⋆ͥ⋆ͣ⋆᭄ͫ⁣𓆩𝙻𝚄𝚃𝚃𝙰𝙿𝙿𝙸𓆪➳࿐𝆺𝅥⃝🇧🇷</a></b>"""
-    
+    REPRT_MSG = """🖥️Reported To Admin🖥️"""
     ABOUT_TXT = """<b>🌝Mʏ Nᴀᴍᴇ🌝: {}
 👨‍💻ᴅᴇᴠᴇʟᴏᴘᴇʀ👨‍💻: <a href='https://t.me/KOMBOTZZ'>『🍁』༺⋆ͥ⋆ͣ⋆᭄ͫ⁣𓆩𝙻𝚄𝚃𝚃𝙰𝙿𝙿𝙸𓆪➳࿐𝆺𝅥⃝🇧🇷</a>
 📚Lɪʙʀᴀʀʏ📚: <a href='https://docs.pyrogram.org/'>Pʏʀᴏɢʀᴀᴍ</a>

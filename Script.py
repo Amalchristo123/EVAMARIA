@@ -17,7 +17,7 @@ Dᴇᴠᴇʟᴏᴘᴇʀ:
     DKICK ="""kick"""
     CREATOR_REQUIRED ="""creator requiered"""
     ABOUT_TXT = """<b>🌝Mʏ Nᴀᴍᴇ🌝: {}
-👨‍💻ᴅᴇᴠᴇʟᴏᴘᴇʀ👨‍💻: <a href='https://t.me/KOMBOTZZ'>『🍁』༺⋆ͥ⋆ͣ⋆᭄ͫ⁣𓆩𝙻𝚄𝚃𝚃𝙰𝙿𝙿𝙸𓆪➳࿐𝆺𝅥⃝🇧🇷</a>
+👨‍💻ᴅᴇᴠᴇʟᴏᴘᴇʀ👨‍💻: <a href='https://t.me/AmalChrist0'>ᴀᴍᴀʟ ᴄʜʀɪꜱᴛᴏ</a>
 📚Lɪʙʀᴀʀʏ📚: <a href='https://docs.pyrogram.org/'>Pʏʀᴏɢʀᴀᴍ</a>
 📝Lᴀɴɢᴜᴀɢᴇ📝: <a href='https://www.python.org/download/releases/3.0/'>Pʏᴛʜᴏɴ 3</a>
 🗃️DᴀᴛᴀBᴀsᴇ🗃️: <a href='https://www.mongodb.com/'>MᴏɴɢᴏDB</a>
